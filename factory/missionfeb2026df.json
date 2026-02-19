@@ -1,0 +1,9 @@
+{
+	"name": "missionfeb2026df",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "fd7f2c75-60cd-4c86-9151-689425e4db3f",
+		"tenantId": "382dd1b3-edc9-437c-9ef0-3f5908a0317e"
+	}
+}
