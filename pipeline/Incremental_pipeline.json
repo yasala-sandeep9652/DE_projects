@@ -142,7 +142,8 @@
 				"defaultValue": "DimUser"
 			},
 			"column": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "updated_at"
 			}
 		},
 		"variables": {
