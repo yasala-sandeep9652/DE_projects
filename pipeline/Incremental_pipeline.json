@@ -59,7 +59,10 @@
 				"outputs": [
 					{
 						"referenceName": "ParquetDS",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Container": "bronze"
+						}
 					}
 				]
 			},
