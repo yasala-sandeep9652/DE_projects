@@ -11,6 +11,12 @@
 						"dependencyConditions": [
 							"Succeeded"
 						]
+					},
+					{
+						"activity": "Current",
+						"dependencyConditions": [
+							"Succeeded"
+						]
 					}
 				],
 				"policy": {
@@ -61,7 +67,8 @@
 						"referenceName": "ParquetDS",
 						"type": "DatasetReference",
 						"parameters": {
-							"Container": "bronze"
+							"Container": "bronze",
+							"folder": "user"
 						}
 					}
 				]
@@ -102,6 +109,16 @@
 					},
 					"firstRowOnly": false
 				}
+			},
+			{
+				"name": "Current",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
 			}
 		],
 		"parameters": {
