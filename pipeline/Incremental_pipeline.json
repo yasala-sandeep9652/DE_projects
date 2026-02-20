@@ -138,7 +138,8 @@
 				"defaultValue": "dbo"
 			},
 			"table": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "DimUser"
 			},
 			"column": {
 				"type": "string"
