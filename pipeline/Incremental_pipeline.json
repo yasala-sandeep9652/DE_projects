@@ -136,6 +136,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"expression": {
+						"value": "@{activity('ASQL_AZdl').output.dataRead > 0}",
+						"type": "Expression"
+					},
 					"ifTrueActivities": [
 						{
 							"name": "MAx_lastmodifed_date_copy1",
