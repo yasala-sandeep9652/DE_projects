@@ -132,9 +132,16 @@
 				}
 			},
 			{
-				"name": "upadte",
+				"name": "upadating_last_modified_data",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Azsql_AZadls",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -144,8 +151,30 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "JsonSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "JsonReadSettings"
+						}
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "date_json",
+						"type": "DatasetReference",
+						"parameters": {
+							"Container": "bronze",
+							"folder": "cdc",
+							"file": "empty"
+						}
+					}
+				]
 			}
 		],
 		"parameters": {
