@@ -158,7 +158,11 @@
 									"referenceName": "ParquetDS",
 									"type": "DatasetReference",
 									"parameters": {
-										"Container": "bronze"
+										"Container": "bronze",
+										"folder": {
+											"value": "@concat(pipeline().parameters.table,'_',variables('current'))",
+											"type": "Expression"
+										}
 									}
 								},
 								"enableLogging": true,
