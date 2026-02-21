@@ -153,6 +153,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "JsonSource",
+						"additionalColumns": [
+							{
+								"name": "cdc",
+								"value": "$$FILEPATH"
+							}
+						],
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
@@ -160,6 +166,15 @@
 						},
 						"formatSettings": {
 							"type": "JsonReadSettings"
+						}
+					},
+					"sink": {
+						"type": "JsonSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "JsonWriteSettings"
 						}
 					},
 					"enableStaging": false
@@ -171,8 +186,14 @@
 						"parameters": {
 							"Container": "bronze",
 							"folder": "cdc",
-							"file": "empty"
+							"file": "empty.json"
 						}
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "date_json",
+						"type": "DatasetReference"
 					}
 				]
 			}
