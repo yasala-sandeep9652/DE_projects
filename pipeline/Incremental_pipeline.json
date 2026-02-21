@@ -82,7 +82,7 @@
 							{
 								"name": "cdc",
 								"value": {
-									"value": "asdadasd",
+									"value": "@activity('MAx_lastmodifed_date').output.resultSets[0].rows[0].cdc",
 									"type": "Expression"
 								}
 							}
