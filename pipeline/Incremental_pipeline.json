@@ -180,7 +180,8 @@
 						"referenceName": "date_json",
 						"type": "DatasetReference",
 						"parameters": {
-							"Container": "bronze"
+							"Container": "bronze",
+							"folder": "user"
 						}
 					}
 				]
