@@ -156,7 +156,10 @@
 						"additionalColumns": [
 							{
 								"name": "cdc",
-								"value": "$$FILEPATH"
+								"value": {
+									"value": "asdadasd",
+									"type": "Expression"
+								}
 							}
 						],
 						"storeSettings": {
@@ -193,7 +196,12 @@
 				"outputs": [
 					{
 						"referenceName": "date_json",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"Container": "bronze",
+							"folder": "cdc",
+							"file": "cdc.json"
+						}
 					}
 				]
 			}
