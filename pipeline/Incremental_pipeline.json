@@ -159,7 +159,8 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"Container": "bronze",
-										"folder": {
+										"folder": "user",
+										"file": {
 											"value": "@concat(pipeline().parameters.table,'_',variables('current'))",
 											"type": "Expression"
 										}
