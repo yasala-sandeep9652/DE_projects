@@ -59,6 +59,8 @@
 			{
 				"name": "upadating_last_modified_data",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -181,7 +183,11 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"Container": "bronze",
-							"folder": "user"
+							"folder": "user",
+							"file": {
+								"value": "@concat(pipeline().parameters.table,'_',variables('current'))",
+								"type": "Expression"
+							}
 						}
 					}
 				]
