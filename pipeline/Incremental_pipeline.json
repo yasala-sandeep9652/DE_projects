@@ -195,7 +195,10 @@
 						"additionalColumns": [
 							{
 								"name": "cdc",
-								"value": ""
+								"value": {
+									"value": "@activity('max_date').output.rows[0].cdc",
+									"type": "Expression"
+								}
 							}
 						],
 						"storeSettings": {
