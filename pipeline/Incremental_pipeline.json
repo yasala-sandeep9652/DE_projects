@@ -309,7 +309,11 @@
 				"typeProperties": {
 					"scripts": [
 						{
-							"type": "Query"
+							"type": "Query",
+							"text": {
+								"value": "SELECT MAX(updated_at) FROM @{pipeline().parameters.Schema}.@{pipeline().parameters.table} ",
+								"type": "Expression"
+							}
 						}
 					],
 					"scriptBlockExecutionTimeout": "02:00:00"
