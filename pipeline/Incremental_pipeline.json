@@ -154,7 +154,7 @@
 						{
 							"type": "Query",
 							"text": {
-								"value": "SELECT MAX(updated_at) FROM @{pipeline().parameters.Schema}.@{pipeline().parameters.table}",
+								"value": "SELECT MAX(@{pipeline().parameters.column}) FROM @{pipeline().parameters.Schema}.@{pipeline().parameters.table}",
 								"type": "Expression"
 							}
 						}
@@ -173,6 +173,8 @@
 			{
 				"name": "updating_mx_date",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "MAx_lastmodifed_date_copy1_copy1_copy1_copy1",
