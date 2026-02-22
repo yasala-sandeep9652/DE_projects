@@ -353,7 +353,7 @@
 				}
 			},
 			{
-				"name": "Script1",
+				"name": "checking_max",
 				"type": "Script",
 				"dependsOn": [
 					{
@@ -371,8 +371,16 @@
 					"secureInput": false
 				},
 				"userProperties": [],
+				"linkedServiceName": {
+					"referenceName": "AzureSqlLS",
+					"type": "LinkedServiceReference"
+				},
 				"typeProperties": {
-					"scripts": [],
+					"scripts": [
+						{
+							"type": "Query"
+						}
+					],
 					"scriptBlockExecutionTimeout": "02:00:00"
 				}
 			}
