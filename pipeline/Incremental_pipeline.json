@@ -154,7 +154,7 @@
 						{
 							"type": "Query",
 							"text": {
-								"value": "SELECT MAX(@{pipeline().parameters.column}) FROM @{pipeline().parameters.Schema}.@{pipeline().parameters.table};",
+								"value": "SELECT MAX('@{pipeline().parameters.column}') FROM @{pipeline().parameters.Schema}.@{pipeline().parameters.table};",
 								"type": "Expression"
 							}
 						}
