@@ -266,7 +266,23 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"enableLogging": false
+								"dataset": {
+									"referenceName": "ParquetDS",
+									"type": "DatasetReference",
+									"parameters": {
+										"Container": "bronze",
+										"folder": {
+											"value": "@pipeline().parameters.table",
+											"type": "Expression"
+										}
+									}
+								},
+								"enableLogging": false,
+								"storeSettings": {
+									"type": "AzureBlobFSReadSettings",
+									"recursive": true,
+									"enablePartitionDiscovery": false
+								}
 							}
 						}
 					],
