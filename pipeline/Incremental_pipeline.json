@@ -127,42 +127,6 @@
 				]
 			},
 			{
-				"name": "max_of_date",
-				"type": "Script",
-				"dependsOn": [
-					{
-						"activity": "MAx_lastmodifed_date_copy1_copy1_copy1_copy1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"linkedServiceName": {
-					"referenceName": "AzureSqlLS",
-					"type": "LinkedServiceReference"
-				},
-				"typeProperties": {
-					"scripts": [
-						{
-							"type": "Query",
-							"text": {
-								"value": "SELECT MAX(updated_at) FROM @{pipeline().parameters.Schema}.@{pipeline().parameters.table} ",
-								"type": "Expression"
-							}
-						}
-					],
-					"scriptBlockExecutionTimeout": "02:00:00"
-				}
-			},
-			{
 				"name": "MAx_lastmodifed_date_copy1_copy1_copy1_copy1",
 				"type": "Script",
 				"dependsOn": [
@@ -190,7 +154,7 @@
 						{
 							"type": "Query",
 							"text": {
-								"value": "select max(updated_at) as cdc FROM @{pipeline().parameters.Schema}.@{pipeline().parameters.table}",
+								"value": "SELECT MAX(updated_at) FROM @{pipeline().parameters.Schema}.@{pipeline().parameters.table}",
 								"type": "Expression"
 							}
 						}
