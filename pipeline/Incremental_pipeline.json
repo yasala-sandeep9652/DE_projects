@@ -170,6 +170,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"expression": {
+						"value": "@greater(activity('ASQL_AZdl').output.dataRead,0 )",
+						"type": "Expression"
+					},
 					"ifFalseActivities": [
 						{
 							"name": "Delete1",
