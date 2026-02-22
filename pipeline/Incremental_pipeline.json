@@ -127,7 +127,7 @@
 				]
 			},
 			{
-				"name": "max_",
+				"name": "max_date",
 				"type": "Script",
 				"dependsOn": [
 					{
@@ -173,11 +173,9 @@
 			{
 				"name": "updating_mx_date",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
-						"activity": "max_",
+						"activity": "max_date",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -196,7 +194,7 @@
 						"type": "JsonSource",
 						"additionalColumns": [
 							{
-								"value": "$$FILEPATH"
+								"value": "$$FILENAME"
 							}
 						],
 						"storeSettings": {
