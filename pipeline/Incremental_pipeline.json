@@ -127,7 +127,7 @@
 				]
 			},
 			{
-				"name": "MAx_lastmodifed_date_copy1_copy1_copy1_copy1",
+				"name": "max_",
 				"type": "Script",
 				"dependsOn": [
 					{
@@ -177,7 +177,7 @@
 				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
-						"activity": "MAx_lastmodifed_date_copy1_copy1_copy1_copy1",
+						"activity": "max_",
 						"dependencyConditions": [
 							"Succeeded"
 						]
