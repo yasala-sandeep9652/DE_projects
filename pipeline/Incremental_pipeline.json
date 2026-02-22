@@ -126,8 +126,6 @@
 			{
 				"name": "if_incremental_zer0",
 				"type": "IfCondition",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "ASQL_AZdl",
