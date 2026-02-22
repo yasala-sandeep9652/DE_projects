@@ -5,6 +5,8 @@
 			{
 				"name": "last_modified_date",
 				"type": "Lookup",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -42,6 +44,8 @@
 			{
 				"name": "Current_timestamp",
 				"type": "SetVariable",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"secureOutput": false,
@@ -59,6 +63,8 @@
 			{
 				"name": "ASQL_AZdl",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "last_modified_date",
@@ -165,6 +171,8 @@
 			{
 				"name": "upadating_last_modified_data_copy1",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "MAx_lastmodifed_date_copy1_copy1",
