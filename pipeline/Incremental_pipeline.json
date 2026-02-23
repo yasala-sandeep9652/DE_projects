@@ -408,6 +408,9 @@
 			"column": {
 				"type": "string",
 				"defaultValue": "updated_at"
+			},
+			"from_date": {
+				"type": "string"
 			}
 		},
 		"variables": {
