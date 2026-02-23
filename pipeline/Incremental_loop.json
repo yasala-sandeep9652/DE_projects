@@ -115,6 +115,7 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "last_modified_date",
