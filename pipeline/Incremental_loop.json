@@ -233,7 +233,7 @@
 									"parameters": {
 										"Container": "bronze",
 										"folder": {
-											"value": "@item().table",
+											"value": "@item().table_cdc",
 											"type": "Expression"
 										},
 										"file": {
