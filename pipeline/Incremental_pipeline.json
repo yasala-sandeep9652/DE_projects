@@ -88,7 +88,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "select * from @{pipeline().parameters.Schema}.@{pipeline().parameters.table} where @{pipeline().parameters.column} > '@{activity('last_modified_date').output.value[0].cdc}'",
+							"value": "select * from @{pipeline().parameters.Schema}.@{pipeline().parameters.table} where @{pipeline().parameters.column} > '@{if(empty(pipeline().parameters.from_date), activity('last_modified_date').output.value[0].cdc,pipeline().parameters.from_date)}\n\n'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
