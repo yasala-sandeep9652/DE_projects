@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().parameters.item_input[0]",
+						"value": "@pipeline().parameters.item_input",
 						"type": "Expression"
 					},
 					"activities": [
@@ -315,38 +315,7 @@
 		"parameters": {
 			"item_input": {
 				"type": "string",
-				"defaultValue": [
-					{
-						"schema": "dbo",
-						"table": "DimUser",
-						"cdc_col": "updated_at",
-						"from_date": ""
-					},
-					{
-						"schema": "dbo",
-						"table": "DimTrack",
-						"cdc_col": "updated_at",
-						"from_date": ""
-					},
-					{
-						"schema": "dbo",
-						"table": "DimDate",
-						"cdc_col": "date",
-						"from_date": ""
-					},
-					{
-						"schema": "dbo",
-						"table": "DimArtist",
-						"cdc_col": "updated_at",
-						"from_date": ""
-					},
-					{
-						"schema": "dbo",
-						"table": "FactStream",
-						"cdc_col": "stream_timestamp",
-						"from_date": ""
-					}
-				]
+				"defaultValue": "[  ' {     \"schema\": \"dbo\",     \"table\": \"DimUser\",     \"cdc_col\": \"updated_at\",     \"from_date\": \"\"   },   {     \"schema\": \"dbo\",     \"table\": \"DimTrack\",     \"cdc_col\": \"updated_at\",     \"from_date\": \"\"   },   {     \"schema\": \"dbo\",     \"table\": \"DimDate\",     \"cdc_col\": \"date\",     \"from_date\": \"\"   },   {     \"schema\": \"dbo\",     \"table\": \"DimArtist\",     \"cdc_col\": \"updated_at\",     \"from_date\": \"\"   },   {     \"schema\": \"dbo\",     \"table\": \"FactStream\",     \"cdc_col\": \"stream_timestamp\",     \"from_date\": \"\"   } ]"
 			}
 		},
 		"variables": {
