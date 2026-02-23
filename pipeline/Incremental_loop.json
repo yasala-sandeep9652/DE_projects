@@ -320,7 +320,7 @@
 												{
 													"type": "Query",
 													"text": {
-														"value": "SELECT MAX(updated_at) as cdc FROM @{pipeline().parameters.Schema}.@{pipeline().parameters.table}",
+														"value": "SELECT MAX(@{item().cdc_col}) as cdc FROM @{item().Schema}.@{item().table}",
 														"type": "Expression"
 													}
 												}
