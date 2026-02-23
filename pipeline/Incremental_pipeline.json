@@ -314,7 +314,7 @@
 									"parameters": {
 										"Container": "bronze",
 										"folder": {
-											"value": "@{pipeline().parameters.table}_'cdc''",
+											"value": "@{pipeline().parameters.table}_'cdc'",
 											"type": "Expression"
 										},
 										"file": "cdc.json"
