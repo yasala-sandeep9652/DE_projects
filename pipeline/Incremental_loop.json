@@ -116,7 +116,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@pipeline().parameters.loop_input",
+						"value": "@pipeline().parameters.loop_inputpipeline().parameters.loop_inputpipeline().parameters.loop_input",
 						"type": "Expression"
 					},
 					"isSequential": true,
