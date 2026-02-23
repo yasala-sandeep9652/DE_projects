@@ -410,19 +410,7 @@
 			}
 		],
 		"parameters": {
-			"Schema": {
-				"type": "string",
-				"defaultValue": "dbo"
-			},
-			"table": {
-				"type": "string",
-				"defaultValue": "DimUser"
-			},
-			"column": {
-				"type": "string",
-				"defaultValue": "updated_at"
-			},
-			"from_date": {
+			"loop_input": {
 				"type": "string"
 			}
 		},
