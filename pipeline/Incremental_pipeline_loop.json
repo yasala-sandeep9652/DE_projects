@@ -185,7 +185,7 @@
 												"parameters": {
 													"Container": "bronze",
 													"folder": {
-														"value": "@pipeline().parameters.table",
+														"value": "@concat(item().table,'cdc')",
 														"type": "Expression"
 													},
 													"file": {
