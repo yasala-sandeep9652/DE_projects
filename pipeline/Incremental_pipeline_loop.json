@@ -106,15 +106,23 @@
 									"partitionOption": "None"
 								},
 								"sink": {
-									"type": "JsonSink",
+									"type": "ParquetSink",
 									"storeSettings": {
 										"type": "AzureBlobFSWriteSettings"
 									},
 									"formatSettings": {
-										"type": "JsonWriteSettings"
+										"type": "ParquetWriteSettings"
 									}
 								},
-								"enableStaging": false
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
@@ -124,18 +132,10 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "date_json",
+									"referenceName": "ParquetDS",
 									"type": "DatasetReference",
 									"parameters": {
-										"Container": "bronze",
-										"folder": {
-											"value": "@concat(item().table,'_','cdc')",
-											"type": "Expression"
-										},
-										"file": {
-											"value": "@concat(item().table,'_',variables('current'))",
-											"type": "Expression"
-										}
+										"Container": "bronze"
 									}
 								}
 							]
