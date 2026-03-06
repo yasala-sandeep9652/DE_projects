@@ -135,7 +135,15 @@
 									"referenceName": "ParquetDS",
 									"type": "DatasetReference",
 									"parameters": {
-										"Container": "bronze"
+										"Container": "bronze",
+										"folder": {
+											"value": "@concat(item().table,'_','cdc')",
+											"type": "Expression"
+										},
+										"file": {
+											"value": "@concat(item().table,'_',variables('current'))",
+											"type": "Expression"
+										}
 									}
 								}
 							]
